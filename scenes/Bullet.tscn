@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7jpvwe3uj0pt"]
+
+[ext_resource type="Script" uid="uid://b4e2mmvbm8sk8" path="res://scripts/Bullet.gd" id="1_p1sfj"]
+[ext_resource type="Resource" uid="uid://da3mb7pvxtinp" path="res://resources/bullets/BaseBullet.tres" id="2_4utqk"]
+[ext_resource type="Texture2D" uid="uid://rr00iegxkfxl" path="res://assets/sprites/bullet_base2.png" id="3_51h0o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ropf"]
+radius = 2.0
+height = 6.0
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_p1sfj")
+bullet_stats = ExtResource("2_4utqk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_51h0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2ropf")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

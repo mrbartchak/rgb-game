@@ -1,0 +1,13 @@
+[gd_scene load_steps=7 format=3 uid="uid://vikhvm0qgvh4"]
+
+[ext_resource type="Script" uid="uid://bbsqcvuuuicpu" path="res://scripts/EnemySpawner.gd" id="1_wimyj"]
+[ext_resource type="Script" uid="uid://cwrlpd5rei81w" path="res://resources/enemies/EnemyStats.gd" id="2_exs7w"]
+[ext_resource type="Resource" uid="uid://cmw5sp0ltsbeo" path="res://resources/enemies/RedEnemy.tres" id="3_3d38x"]
+[ext_resource type="Resource" uid="uid://2mn5xk8fc3nn" path="res://resources/enemies/BlueEnemy.tres" id="4_3vhok"]
+[ext_resource type="Resource" uid="uid://clgrxonchgeed" path="res://resources/enemies/GreenEnemy.tres" id="5_gtc37"]
+[ext_resource type="PackedScene" uid="uid://bgjurhtomgk5" path="res://scenes/Enemy.tscn" id="6_3d38x"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_wimyj")
+enemy_types = Array[ExtResource("2_exs7w")]([ExtResource("3_3d38x"), ExtResource("4_3vhok"), ExtResource("5_gtc37")])
+enemy_scene = ExtResource("6_3d38x")

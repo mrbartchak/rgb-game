@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=3 format=3 uid="uid://cmw5sp0ltsbeo"]
+
+[ext_resource type="Script" uid="uid://cwrlpd5rei81w" path="res://resources/enemies/EnemyStats.gd" id="1_m2yjb"]
+[ext_resource type="Texture2D" uid="uid://irl8chj1ph6r" path="res://assets/sprites/enemy_red.png" id="2_j7vke"]
+
+[resource]
+script = ExtResource("1_m2yjb")
+name = "Red Guy"
+texture = ExtResource("2_j7vke")
+metadata/_custom_type_script = "uid://cwrlpd5rei81w"

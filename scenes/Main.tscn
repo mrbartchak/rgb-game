@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqrt6l4gkc6l6"]
+
+[ext_resource type="PackedScene" uid="uid://dvlsxfw51on8v" path="res://scenes/Hand.tscn" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://scenes/EnemySpawner.tscn" id="4_rarhs"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Hand" parent="." instance=ExtResource("1_elqb8")]
+position = Vector2(159, 159)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("4_rarhs")]
