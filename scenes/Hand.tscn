@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvlsxfw51on8v"]
 
-[ext_resource type="Texture2D" uid="uid://uvp4p6sdpgns" path="res://assets/sprites/hand_base.png" id="1_bw2j2"]
+[ext_resource type="Texture2D" uid="uid://uvp4p6sdpgns" path="res://assets/sprites/hands/hand_base.png" id="1_bw2j2"]
 [ext_resource type="Script" uid="uid://c2g7psji6v7qs" path="res://scripts/Hand.gd" id="1_vchyo"]
 [ext_resource type="Resource" uid="uid://hulmck8horhc" path="res://resources/hands/BaseHand.tres" id="2_co447"]
 [ext_resource type="PackedScene" uid="uid://b7jpvwe3uj0pt" path="res://scenes/Bullet.tscn" id="3_oym42"]
-[ext_resource type="AudioStream" uid="uid://ccowupubrgnns" path="res://assets/laserShoot.wav" id="5_fx8y4"]
+[ext_resource type="AudioStream" uid="uid://ccowupubrgnns" path="res://assets/audio/laserShoot.wav" id="5_fx8y4"]
 
 [node name="Hand" type="Sprite2D"]
 texture = ExtResource("1_bw2j2")

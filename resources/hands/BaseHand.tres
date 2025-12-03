@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://da3mb7pvxtinp" path="res://resources/bullets/BaseBullet.tres" id="1_u1du1"]
 [ext_resource type="Script" uid="uid://cnbo5gpkmid00" path="res://resources/hands/HandStats.gd" id="1_wl2k7"]
-[ext_resource type="Texture2D" uid="uid://uvp4p6sdpgns" path="res://assets/sprites/hand_base.png" id="2_7q845"]
+[ext_resource type="Texture2D" uid="uid://uvp4p6sdpgns" path="res://assets/sprites/hands/hand_base.png" id="2_7q845"]
 
 [resource]
 script = ExtResource("1_wl2k7")

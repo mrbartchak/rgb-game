@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqrt6l4gkc6l6"]
+[gd_scene load_steps=8 format=3 uid="uid://cqrt6l4gkc6l6"]
 
 [ext_resource type="PackedScene" uid="uid://dvlsxfw51on8v" path="res://scenes/Hand.tscn" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://cnbo5gpkmid00" path="res://resources/hands/HandStats.gd" id="2_0bbpv"]
+[ext_resource type="Resource" uid="uid://hulmck8horhc" path="res://resources/hands/BaseHand.tres" id="3_nxtc6"]
+[ext_resource type="Resource" uid="uid://7yaa5guwjck" path="res://resources/hands/RedHand.tres" id="4_jlsqs"]
 [ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://scenes/EnemySpawner.tscn" id="4_rarhs"]
+[ext_resource type="Resource" uid="uid://c130xdna86i4c" path="res://resources/hands/GreenHand.tres" id="5_q8u5g"]
+[ext_resource type="Resource" uid="uid://cohoh6uim32r1" path="res://resources/hands/BlueHand.tres" id="6_lhr70"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Hand" parent="." instance=ExtResource("1_elqb8")]
 position = Vector2(159, 159)
+hand_stats = Array[ExtResource("2_0bbpv")]([ExtResource("3_nxtc6"), ExtResource("4_jlsqs"), ExtResource("5_q8u5g"), ExtResource("6_lhr70")])
 
 [node name="EnemySpawner" parent="." instance=ExtResource("4_rarhs")]

@@ -1,14 +1,15 @@
 extends Sprite2D
 
-@export var hand_stats: HandStats
+@export var hand_stats: Array[HandStats]
 @export var bullet_scene: PackedScene
 var current_bullet: BulletStats
 var movement_speed: float = 10.5
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	texture = hand_stats.texture
-	current_bullet = hand_stats.bullet_type
+	var current_hand = hand_stats.pick_random()
+	texture = current_hand.texture
+	current_bullet = current_hand.bullet_type
 
 func _physics_process(delta):
 	global_position = global_position.lerp(get_viewport().get_mouse_position(), movement_speed * delta)

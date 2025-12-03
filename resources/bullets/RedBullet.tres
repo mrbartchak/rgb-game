@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BulletStats" load_steps=3 format=3 uid="uid://cnn13xiljq525"]
+
+[ext_resource type="Script" uid="uid://c3053f5tx0sgw" path="res://resources/bullets/BulletStats.gd" id="1_s2imr"]
+[ext_resource type="Texture2D" uid="uid://h4wxhc54pn14" path="res://assets/sprites/bullets/bullet_red.png" id="2_ltqmd"]
+
+[resource]
+script = ExtResource("1_s2imr")
+name = "Red Bullet"
+texture = ExtResource("2_ltqmd")
+metadata/_custom_type_script = "uid://c3053f5tx0sgw"

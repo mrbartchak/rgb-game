@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BulletStats" load_steps=3 format=3 uid="uid://div0y7f4kxwe3"]
+
+[ext_resource type="Script" uid="uid://c3053f5tx0sgw" path="res://resources/bullets/BulletStats.gd" id="1_6i1ms"]
+[ext_resource type="Texture2D" uid="uid://6ge3y5fr8ewk" path="res://assets/sprites/bullets/bullet_green.png" id="2_her0f"]
+
+[resource]
+script = ExtResource("1_6i1ms")
+name = "Green Bullet"
+texture = ExtResource("2_her0f")
+metadata/_custom_type_script = "uid://c3053f5tx0sgw"
