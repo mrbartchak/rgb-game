@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqrt6l4gkc6l6"]
+[gd_scene load_steps=11 format=3 uid="uid://cqrt6l4gkc6l6"]
 
 [ext_resource type="PackedScene" uid="uid://dvlsxfw51on8v" path="res://scenes/Hand.tscn" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://cnbo5gpkmid00" path="res://resources/hands/HandStats.gd" id="2_0bbpv"]
@@ -7,6 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://scenes/EnemySpawner.tscn" id="4_rarhs"]
 [ext_resource type="Resource" uid="uid://c130xdna86i4c" path="res://resources/hands/GreenHand.tres" id="5_q8u5g"]
 [ext_resource type="Resource" uid="uid://cohoh6uim32r1" path="res://resources/hands/BlueHand.tres" id="6_lhr70"]
+[ext_resource type="Shader" uid="uid://duufd1vl0w0v5" path="res://shaders/scrolling_background.gdshader" id="8_jlsqs"]
+[ext_resource type="Texture2D" uid="uid://3slmtotgqr8v" path="res://assets/sprites/backgrounds/pattern_15.png" id="9_q8u5g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q8u5g"]
+shader = ExtResource("8_jlsqs")
+shader_parameter/scroll_speed = 0.10000000475
+shader_parameter/angle_degrees = 45.0
+shader_parameter/repeat = 5.0
+shader_parameter/tint = Color(0.7, 1, 0.735, 0.5176471)
 
 [node name="Main" type="Node2D"]
 
@@ -15,3 +24,21 @@ position = Vector2(159, 159)
 hand_stats = Array[ExtResource("2_0bbpv")]([ExtResource("3_nxtc6"), ExtResource("4_jlsqs"), ExtResource("5_q8u5g"), ExtResource("6_lhr70")])
 
 [node name="EnemySpawner" parent="." instance=ExtResource("4_rarhs")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+material = SubResource("ShaderMaterial_q8u5g")
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_q8u5g")
+stretch_mode = 6
