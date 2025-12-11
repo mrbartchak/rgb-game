@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ColorMode" load_steps=4 format=3 uid="uid://c88ojebjr52rw"]
+
+[ext_resource type="Resource" uid="uid://c71swc7tihjde" path="res://resources/attacks/RedAttack.tres" id="1_mxihx"]
+[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://resources/colors/ColorMode.gd" id="1_u5xdb"]
+[ext_resource type="Texture2D" uid="uid://yb3yviqh5uko" path="res://assets/sprites/hands/hand_red.png" id="3_aaf2p"]
+
+[resource]
+script = ExtResource("1_u5xdb")
+name = "Red Mode"
+attack_stats = ExtResource("1_mxihx")
+texture = ExtResource("3_aaf2p")
+metadata/_custom_type_script = "uid://bxorx5qso2lsg"

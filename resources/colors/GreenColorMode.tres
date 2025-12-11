@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ColorMode" load_steps=4 format=3 uid="uid://3bbgergmkp14"]
+
+[ext_resource type="Resource" uid="uid://dcdk7itoi03sn" path="res://resources/attacks/GreenAttack.tres" id="1_h0nss"]
+[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://resources/colors/ColorMode.gd" id="1_l62up"]
+[ext_resource type="Texture2D" uid="uid://43fu06v2ifcu" path="res://assets/sprites/hands/hand_green.png" id="3_bleh6"]
+
+[resource]
+script = ExtResource("1_l62up")
+name = "Green Mode"
+attack_stats = ExtResource("1_h0nss")
+texture = ExtResource("3_bleh6")
+metadata/_custom_type_script = "uid://bxorx5qso2lsg"

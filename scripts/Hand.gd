@@ -1,15 +1,16 @@
 extends Sprite2D
 
-@export var hand_stats: Array[HandStats]
 @export var bullet_scene: PackedScene
+@export var color_modes: Array[ColorMode]
+var current_mode: ColorMode
 var current_bullet: BulletStats
 var movement_speed: float = 10.5
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	var current_hand = hand_stats.pick_random()
-	texture = current_hand.texture
-	current_bullet = current_hand.bullet_type
+	current_mode = color_modes.pick_random()
+	texture = current_mode.texture
+	current_bullet = current_mode.attack_stats.bullet_stats
 
 func _physics_process(delta):
 	global_position = global_position.lerp(get_viewport().get_mouse_position(), movement_speed * delta)
@@ -32,11 +33,12 @@ func _handle_shadow() -> void:
 	$Shadow.position.x = lerp(0.0, -sign(distance) * max_offset_shadow, abs(distance/center.x))
 
 func shoot_bullet():
-	$BulletSound.pitch_scale = randf_range(0.8, 1.2)
-	$BulletSound.play()
-	var bullet: Node2D = bullet_scene.instantiate()
-	bullet.bullet_stats = current_bullet
-	bullet.position = $BulletSpawn.global_position
-	bullet.rotation = rotation
-	bullet.show_behind_parent = true
-	get_parent().add_child(bullet)
+	current_mode.attack_stats.fire($BulletSpawn)
+	#$BulletSound.pitch_scale = randf_range(0.8, 1.2)
+	#$BulletSound.play()
+	#var bullet: Node2D = bullet_scene.instantiate()
+	#bullet.bullet_stats = current_bullet
+	#bullet.position = $BulletSpawn.global_position
+	#bullet.rotation = rotation
+	#bullet.show_behind_parent = true
+	#get_parent().add_child(bullet)

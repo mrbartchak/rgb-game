@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ColorMode" load_steps=4 format=3 uid="uid://dx3i1a2g23cs4"]
+
+[ext_resource type="Resource" uid="uid://p6hgxrt104bk" path="res://resources/attacks/BlueAttack.tres" id="1_3hleg"]
+[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://resources/colors/ColorMode.gd" id="1_c40no"]
+[ext_resource type="Texture2D" uid="uid://qduxc30kgr8w" path="res://assets/sprites/hands/hand_blue.png" id="3_8r1ph"]
+
+[resource]
+script = ExtResource("1_c40no")
+name = "Blue Mode"
+attack_stats = ExtResource("1_3hleg")
+texture = ExtResource("3_8r1ph")
+metadata/_custom_type_script = "uid://bxorx5qso2lsg"

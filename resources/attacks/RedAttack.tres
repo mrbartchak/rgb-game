@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttackStats" load_steps=3 format=3 uid="uid://c71swc7tihjde"]
+
+[ext_resource type="Resource" uid="uid://cnn13xiljq525" path="res://resources/bullets/RedBullet.tres" id="1_bl5sr"]
+[ext_resource type="Script" uid="uid://tj5b1c5v6ew6" path="res://resources/attacks/AttackStats.gd" id="1_tiree"]
+
+[resource]
+script = ExtResource("1_tiree")
+name = "Red Attack"
+bullet_stats = ExtResource("1_bl5sr")
+fire_rate = 1.0
+metadata/_custom_type_script = "uid://tj5b1c5v6ew6"
