@@ -13,7 +13,10 @@ config_version=5
 config/name="retro-galactic-blast"
 run/main_scene="uid://cqrt6l4gkc6l6"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.24313726, 0.20784314, 0.27450982, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://diovdeyodpe2h"
+boot_splash/minimum_display_time=2000
 
 [display]
 
@@ -34,4 +37,5 @@ window/stretch/scale_mode="integer"
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/lossless_compression/force_png=true
 environment/defaults/default_clear_color=Color(0.24313726, 0.20784314, 0.27450982, 1)

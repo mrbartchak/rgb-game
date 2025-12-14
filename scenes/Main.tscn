@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqrt6l4gkc6l6"]
 
-[ext_resource type="PackedScene" uid="uid://dvlsxfw51on8v" path="res://scenes/Hand.tscn" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://dl7sw8d8ko5su" path="res://scenes/Player.tscn" id="2_rarhs"]
 [ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://scenes/EnemySpawner.tscn" id="4_rarhs"]
 [ext_resource type="Shader" uid="uid://duufd1vl0w0v5" path="res://shaders/scrolling_background.gdshader" id="8_jlsqs"]
 [ext_resource type="Texture2D" uid="uid://c4ntiaf7eh4u6" path="res://assets/sprites/backgrounds/pattern_10.png" id="9_q8u5g"]
@@ -9,17 +9,16 @@
 shader = ExtResource("8_jlsqs")
 shader_parameter/scroll_speed = 0.050000002375
 shader_parameter/angle_degrees = 270.0
-shader_parameter/repeat = 8.0
+shader_parameter/repeat = 12.0
 shader_parameter/tint = Color(0.7, 0.74999994, 1, 0.078431375)
 
 [node name="Main" type="Node"]
 
 [node name="World2D" type="Node2D" parent="."]
 
-[node name="Hand" parent="World2D" instance=ExtResource("1_elqb8")]
-position = Vector2(159, 159)
-
 [node name="EnemySpawner" parent="World2D" instance=ExtResource("4_rarhs")]
+
+[node name="Player" parent="World2D" instance=ExtResource("2_rarhs")]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource("1_u5xdb")
 name = "Red Mode"
-attack_stats = ExtResource("1_mxihx")
+base_attack = ExtResource("1_mxihx")
 texture = ExtResource("3_aaf2p")
 metadata/_custom_type_script = "uid://bxorx5qso2lsg"

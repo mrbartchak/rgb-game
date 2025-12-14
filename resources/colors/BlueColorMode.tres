@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource("1_c40no")
 name = "Blue Mode"
-attack_stats = ExtResource("1_3hleg")
+base_attack = ExtResource("1_3hleg")
 texture = ExtResource("3_8r1ph")
 metadata/_custom_type_script = "uid://bxorx5qso2lsg"
