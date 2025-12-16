@@ -7,5 +7,5 @@
 script = ExtResource("1_tiree")
 name = "Red Attack"
 bullet_stats = ExtResource("1_bl5sr")
-fire_rate = 1.0
+fire_rate = 2.0
 metadata/_custom_type_script = "uid://tj5b1c5v6ew6"

@@ -19,6 +19,7 @@ shader_parameter/tint = Color(0.7, 0.74999994, 1, 0.078431375)
 [node name="EnemySpawner" parent="World2D" instance=ExtResource("1_b2jpy")]
 
 [node name="Player" parent="World2D" instance=ExtResource("2_vhp41")]
+position = Vector2(161, 159)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
