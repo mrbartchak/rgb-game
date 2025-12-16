@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttackStats" load_steps=3 format=3 uid="uid://p6hgxrt104bk"]
+
+[ext_resource type="Resource" uid="uid://dtmvpc8h3gv0y" path="res://combat/bullets/data/BlueBullet.tres" id="1_1h3iv"]
+[ext_resource type="Script" uid="uid://tj5b1c5v6ew6" path="res://combat/attacks/data/AttackStats.gd" id="1_sdpg4"]
+
+[resource]
+script = ExtResource("1_sdpg4")
+name = "Blue Attack"
+bullet_stats = ExtResource("1_1h3iv")
+fire_rate = 2.0
+metadata/_custom_type_script = "uid://tj5b1c5v6ew6"

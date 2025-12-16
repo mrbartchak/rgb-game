@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqrt6l4gkc6l6"]
+
+[ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://EnemySpawner.tscn" id="1_b2jpy"]
+[ext_resource type="PackedScene" uid="uid://dl7sw8d8ko5su" path="res://player/Player.tscn" id="2_vhp41"]
+[ext_resource type="Shader" uid="uid://duufd1vl0w0v5" path="res://assets/shaders/scrolling_background.gdshader" id="3_1bm4c"]
+[ext_resource type="Texture2D" uid="uid://c4ntiaf7eh4u6" path="res://assets/backgrounds/pattern_10.png" id="4_66bhq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q8u5g"]
+shader = ExtResource("3_1bm4c")
+shader_parameter/scroll_speed = 0.050000002375
+shader_parameter/angle_degrees = 270.0
+shader_parameter/repeat = 12.0
+shader_parameter/tint = Color(0.7, 0.74999994, 1, 0.078431375)
+
+[node name="Main" type="Node"]
+
+[node name="World2D" type="Node2D" parent="."]
+
+[node name="EnemySpawner" parent="World2D" instance=ExtResource("1_b2jpy")]
+
+[node name="Player" parent="World2D" instance=ExtResource("2_vhp41")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UI"]
+z_index = -4096
+material = SubResource("ShaderMaterial_q8u5g")
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_66bhq")
+stretch_mode = 6
+flip_v = true
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="RichTextLabel" parent="HUD"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -154.0
+offset_top = -1.0
+offset_right = -54.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "score"

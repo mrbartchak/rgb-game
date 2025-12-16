@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl7sw8d8ko5su"]
+
+[ext_resource type="Texture2D" uid="uid://uvp4p6sdpgns" path="res://player/skins/hand/hand_base.png" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://ibaa6qxiydsy" path="res://player/Player.gd" id="2_v6fml"]
+[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://combat/chromas/data/ColorMode.gd" id="3_70d11"]
+[ext_resource type="Resource" uid="uid://c88ojebjr52rw" path="res://combat/chromas/data/RedColorMode.tres" id="4_cw2d6"]
+[ext_resource type="Resource" uid="uid://3bbgergmkp14" path="res://combat/chromas/data/GreenColorMode.tres" id="5_khinc"]
+[ext_resource type="Resource" uid="uid://dx3i1a2g23cs4" path="res://combat/chromas/data/BlueColorMode.tres" id="6_bruh7"]
+
+[node name="Player" type="Sprite2D"]
+texture = ExtResource("1_p0vlq")
+script = ExtResource("2_v6fml")
+color_modes = Array[ExtResource("3_70d11")]([ExtResource("4_cw2d6"), ExtResource("5_khinc"), ExtResource("6_bruh7")])
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.38039216)
+show_behind_parent = true
+position = Vector2(0, 2)
+texture = ExtResource("1_p0vlq")
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(-1, -7)
+
+[node name="AttackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

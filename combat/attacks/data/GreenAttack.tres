@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AttackStats" load_steps=3 format=3 uid="uid://dcdk7itoi03sn"]
+
+[ext_resource type="Script" uid="uid://tj5b1c5v6ew6" path="res://combat/attacks/data/AttackStats.gd" id="1_ossim"]
+[ext_resource type="Resource" uid="uid://div0y7f4kxwe3" path="res://combat/bullets/data/GreenBullet.tres" id="1_wilk0"]
+
+[resource]
+script = ExtResource("1_ossim")
+name = "Green Attack"
+bullet_stats = ExtResource("1_wilk0")
+fire_rate = 3.0
+metadata/_custom_type_script = "uid://tj5b1c5v6ew6"
