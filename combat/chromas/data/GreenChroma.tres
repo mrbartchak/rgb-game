@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Chroma" load_steps=4 format=3 uid="uid://3bbgergmkp14"]
 
 [ext_resource type="Resource" uid="uid://dcdk7itoi03sn" path="res://combat/attacks/data/GreenAttack.tres" id="1_v5rik"]
-[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://combat/chromas/data/Chroma.gd" id="2_ylfoe"]
+[ext_resource type="Script" uid="uid://bxorx5qso2lsg" path="res://combat/chromas/data/ChromaStats.gd" id="2_ylfoe"]
 [ext_resource type="Texture2D" uid="uid://43fu06v2ifcu" path="res://player/skins/hand/hand_green.png" id="3_p74ut"]
 
 [resource]

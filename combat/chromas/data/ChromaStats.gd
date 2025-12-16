@@ -1,4 +1,4 @@
-class_name Chroma
+class_name ChromaStats
 extends Resource
 
 @export var name: String

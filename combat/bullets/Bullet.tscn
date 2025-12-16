@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7jpvwe3uj0pt"]
+[gd_scene load_steps=6 format=3 uid="uid://b7jpvwe3uj0pt"]
 
 [ext_resource type="Script" uid="uid://b4e2mmvbm8sk8" path="res://combat/bullets/Bullet.gd" id="1_p1sfj"]
-[ext_resource type="Texture2D" uid="uid://rr00iegxkfxl" path="res://combat/bullets/sprites/bullet_base2.png" id="3_51h0o"]
+[ext_resource type="Texture2D" uid="uid://ddxv6wabdd7os" path="res://combat/bullets/sprites/bullet_ball_white.png" id="2_qjw6a"]
+[ext_resource type="Script" uid="uid://6x7xdwionyif" path="res://effects/BulletTrail.gd" id="3_qjw6a"]
+
+[sub_resource type="Curve" id="Curve_qjw6a"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ropf"]
-radius = 2.0
-height = 6.0
+radius = 4.0
+height = 8.0
 
 [node name="Bullet" type="Area2D"]
 collision_layer = 4
@@ -13,7 +18,13 @@ collision_mask = 2
 script = ExtResource("1_p1sfj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_51h0o")
+texture = ExtResource("2_qjw6a")
+
+[node name="Trail" type="Line2D" parent="Sprite2D"]
+top_level = true
+width = 7.0
+width_curve = SubResource("Curve_qjw6a")
+script = ExtResource("3_qjw6a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_2ropf")

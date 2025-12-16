@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var chromas: Array[Chroma]
-var current_chroma: Chroma
+@export var chromas: Array[ChromaStats]
+var current_chroma: ChromaStats
 var current_mode_idx: int
 #refactor later
-var movement_speed: float = 200.0
+var movement_speed: float = 100.0
 var is_firing: bool = false
 
 func _ready() -> void:
@@ -40,8 +40,8 @@ func set_color_mode(mode_idx: int) -> void:
 
 #---Movement---
 func _handle_movement(delta: float) -> void:
-	var accel: float = 1000.0
-	var friction: float = 1000.0
+	var accel: float = 1800.0
+	var friction: float = 2600.0
 	var input_dir: Vector2 = Input.get_vector(
 		"move_left", "move_right", "move_up", "move_down"
 	)

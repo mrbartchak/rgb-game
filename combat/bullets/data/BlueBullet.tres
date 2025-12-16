@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c3053f5tx0sgw" path="res://combat/bullets/data/BulletStats.gd" id="1_gyy17"]
 [ext_resource type="PackedScene" uid="uid://b7jpvwe3uj0pt" path="res://combat/bullets/Bullet.tscn" id="1_uqe4f"]
-[ext_resource type="Texture2D" uid="uid://rcxdecd6a1rd" path="res://combat/bullets/sprites/bullet_blue.png" id="2_lt0uf"]
+[ext_resource type="Texture2D" uid="uid://ddxv6wabdd7os" path="res://combat/bullets/sprites/bullet_ball_white.png" id="3_447eg"]
 
 [resource]
 script = ExtResource("1_gyy17")
 name = "Blue Bullet"
-speed = 500.0
-texture = ExtResource("2_lt0uf")
+speed = 400.0
+texture = ExtResource("3_447eg")
+color = Color(0.3019608, 0.39607844, 0.7058824, 1)
 bullet_scene = ExtResource("1_uqe4f")
 metadata/_custom_type_script = "uid://c3053f5tx0sgw"

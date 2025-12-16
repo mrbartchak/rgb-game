@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://b7jpvwe3uj0pt" path="res://combat/bullets/Bullet.tscn" id="1_8bnfe"]
 [ext_resource type="Script" uid="uid://c3053f5tx0sgw" path="res://combat/bullets/data/BulletStats.gd" id="1_s2imr"]
-[ext_resource type="Texture2D" uid="uid://h4wxhc54pn14" path="res://combat/bullets/sprites/bullet_red.png" id="2_ltqmd"]
+[ext_resource type="Texture2D" uid="uid://ddxv6wabdd7os" path="res://combat/bullets/sprites/bullet_ball_white.png" id="3_e64is"]
 
 [resource]
 script = ExtResource("1_s2imr")
 name = "Red Bullet"
-speed = 500.0
-texture = ExtResource("2_ltqmd")
+texture = ExtResource("3_e64is")
+color = Color(0.9098039, 0.23137255, 0.23137255, 1)
 bullet_scene = ExtResource("1_8bnfe")
 metadata/_custom_type_script = "uid://c3053f5tx0sgw"

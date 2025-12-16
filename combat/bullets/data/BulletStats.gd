@@ -5,6 +5,7 @@ extends Resource
 @export var damage: int = 10
 @export var speed: float = 200.0
 @export var texture: Texture2D
+@export var color: Color = Color.WHITE
 @export var bullet_scene: PackedScene
 
 func spawn_bullet(origin: Node2D) -> void:
