@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqrt6l4gkc6l6"]
+[gd_scene load_steps=7 format=3 uid="uid://cqrt6l4gkc6l6"]
 
 [ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://EnemySpawner.tscn" id="1_b2jpy"]
 [ext_resource type="PackedScene" uid="uid://dl7sw8d8ko5su" path="res://player/Player.tscn" id="2_vhp41"]
 [ext_resource type="Shader" uid="uid://duufd1vl0w0v5" path="res://assets/shaders/scrolling_background.gdshader" id="3_1bm4c"]
+[ext_resource type="PackedScene" uid="uid://bwb25uqmhv3nv" path="res://core/cursor/Cursor.tscn" id="3_vhp41"]
 [ext_resource type="Texture2D" uid="uid://c4ntiaf7eh4u6" path="res://assets/backgrounds/pattern_10.png" id="4_66bhq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q8u5g"]
@@ -20,6 +21,8 @@ shader_parameter/tint = Color(0.7, 0.74999994, 1, 0.078431375)
 
 [node name="Player" parent="World2D" instance=ExtResource("2_vhp41")]
 position = Vector2(161, 159)
+
+[node name="Cursor" parent="World2D" instance=ExtResource("3_vhp41")]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

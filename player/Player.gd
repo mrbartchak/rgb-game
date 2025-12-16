@@ -8,7 +8,6 @@ var movement_speed: float = 100.0
 var is_firing: bool = false
 
 func _ready() -> void:
-	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	set_color_mode(0)
 	$Skin.texture = current_chroma.texture
 	$AttackTimer.wait_time = 1.0 / current_chroma.base_attack.fire_rate

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://6x7xdwionyif" path="res://effects/BulletTrail.gd" id="3_qjw6a"]
 
 [sub_resource type="Curve" id="Curve_qjw6a"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.99999994, 1), 0.5758683, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ropf"]
