@@ -11,4 +11,5 @@ func spawn_bullet(origin: Node2D) -> void:
 	var bullet: Bullet = bullet_scene.instantiate()
 	bullet.bullet_stats = self
 	bullet.global_position = origin.global_position
+	bullet.global_rotation = origin.global_rotation
 	origin.get_tree().current_scene.add_child(bullet)

@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_6i1ms")
 name = "Green Bullet"
+speed = 500.0
 texture = ExtResource("2_her0f")
 bullet_scene = ExtResource("1_dcdoj")
 metadata/_custom_type_script = "uid://c3053f5tx0sgw"

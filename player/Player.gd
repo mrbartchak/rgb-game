@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var color_modes: Array[ColorMode]
-var current_mode: ColorMode
+@export var chromas: Array[Chroma]
+var current_chroma: Chroma
 var current_mode_idx: int
 #refactor later
 var movement_speed: float = 200.0
@@ -10,8 +10,8 @@ var is_firing: bool = false
 func _ready() -> void:
 	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	set_color_mode(0)
-	$Skin.texture = current_mode.texture
-	$AttackTimer.wait_time = 1.0 / current_mode.base_attack.fire_rate
+	$Skin.texture = current_chroma.texture
+	$AttackTimer.wait_time = 1.0 / current_chroma.base_attack.fire_rate
 	$AttackTimer.start()
 
 func _physics_process(delta):
@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 
 #---Attacking---
 func _use_attack() -> void:
-	current_mode.base_attack.fire($BulletSpawn)
+	current_chroma.base_attack.fire($BulletSpawn)
 
 func _on_attack_timer_timeout() -> void:
 	_use_attack()
@@ -34,9 +34,9 @@ func _on_attack_timer_timeout() -> void:
 #---Color Switching---
 func set_color_mode(mode_idx: int) -> void:
 	current_mode_idx = mode_idx
-	current_mode = color_modes.get(mode_idx)
-	$Skin.texture = current_mode.texture
-	$AttackTimer.wait_time = 1.0 / current_mode.base_attack.fire_rate
+	current_chroma = chromas.get(mode_idx)
+	$Skin.texture = current_chroma.texture
+	$AttackTimer.wait_time = 1.0 / current_chroma.base_attack.fire_rate
 
 #---Movement---
 func _handle_movement(delta: float) -> void:

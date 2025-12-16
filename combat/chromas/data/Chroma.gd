@@ -1,4 +1,4 @@
-class_name ColorMode
+class_name Chroma
 extends Resource
 
 @export var name: String
