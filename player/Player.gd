@@ -10,6 +10,7 @@ var is_firing: bool = false
 func _ready() -> void:
 	set_color_mode(0)
 	$Skin.texture = current_chroma.texture
+	$MuzzleFlash.modulate = current_chroma.color
 	$AttackTimer.wait_time = 1.0 / current_chroma.base_attack.fire_rate
 	$AttackTimer.start()
 
@@ -25,6 +26,7 @@ func _input(event: InputEvent) -> void:
 
 #---Attacking---
 func _use_attack() -> void:
+	_flash_muzzle()
 	current_chroma.base_attack.fire($BulletSpawn)
 
 func _on_attack_timer_timeout() -> void:
@@ -35,6 +37,7 @@ func set_color_mode(mode_idx: int) -> void:
 	current_mode_idx = mode_idx
 	current_chroma = chromas.get(mode_idx)
 	$Skin.texture = current_chroma.texture
+	$MuzzleFlash.modulate = current_chroma.color
 	$AttackTimer.wait_time = 1.0 / current_chroma.base_attack.fire_rate
 
 #---Movement---
@@ -69,3 +72,8 @@ func _handle_shadow() -> void:
 	var center: Vector2 = get_viewport_rect().size / 2.0
 	var distance: float = global_position.x - center.x
 	$Shadow.position.x = lerp(0.0, -sign(distance) * max_offset_shadow, abs(distance/center.x))
+
+func _flash_muzzle() -> void:
+	$MuzzleFlash.visible = true
+	await get_tree().create_timer(0.1).timeout
+	$MuzzleFlash.visible = false

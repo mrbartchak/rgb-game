@@ -14,11 +14,6 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	call_deferred("spawn_grid")
 
-func _process(_delta: float) -> void:
-	#spawn_enemy()
-	#await get_tree().create_timer(2.0).timeout
-	pass
-
 func spawn_grid():
 	for row in range(rows):
 		for col in range(cols):
