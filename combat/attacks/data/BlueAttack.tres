@@ -7,5 +7,5 @@
 script = ExtResource("1_sdpg4")
 name = "Blue Attack"
 bullet_stats = ExtResource("1_1h3iv")
-fire_rate = 2.5
+fire_rate = 2.0
 metadata/_custom_type_script = "uid://tj5b1c5v6ew6"

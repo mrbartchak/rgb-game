@@ -7,7 +7,6 @@
 [resource]
 script = ExtResource("1_gyy17")
 name = "Blue Bullet"
-speed = 400.0
 texture = ExtResource("3_447eg")
 color = Color(0.3019608, 0.39607844, 0.7058824, 1)
 bullet_scene = ExtResource("1_uqe4f")

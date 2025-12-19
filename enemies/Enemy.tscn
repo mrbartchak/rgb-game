@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qdnq4kepvn1w" path="res://enemies/sprites/enemy_green.png" id="2_mpr68"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ft8do"]
-radius = 4.0
+radius = 5.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_55jtl"]
 particle_flag_disable_z = true
@@ -17,7 +17,7 @@ gravity = Vector3(0, 0, 0)
 linear_accel_min = -200.0
 linear_accel_max = -200.0
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=["enemies"]]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_55jtl")

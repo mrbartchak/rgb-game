@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	_handle_movement(delta)
-	_aim_at_cursor()
+	_aim_at_nearest(delta)#_aim_at_cursor()
 	#_use_mouse_based_movement(delta)
 	_handle_shadow()
 
@@ -62,6 +62,30 @@ func _handle_movement(delta: float) -> void:
 func _aim_at_cursor() -> void:
 	var dir = get_global_mouse_position() - global_position
 	rotation = dir.angle() + PI / 2
+
+func _aim_at_nearest(delta: float) -> void:
+	var enemy := _get_nearest_enemy(global_position)
+	if enemy:
+		var dir = (enemy.global_position - global_position).normalized()
+		var target_angle = dir.angle() + PI / 2
+		var turn_speed = 10
+		rotation = lerp_angle(rotation, target_angle, turn_speed * delta)
+
+func _get_nearest_enemy(origin: Vector2) -> Node2D:
+	var nearest: Node2D = null
+	var nearest_dist_sq := INF
+
+	for enemy in get_tree().get_nodes_in_group("enemies"):
+		if not enemy.is_inside_tree():
+			continue
+
+		var dist_sq := origin.distance_squared_to(enemy.global_position)
+		if dist_sq < nearest_dist_sq:
+			nearest_dist_sq = dist_sq
+			nearest = enemy
+
+	return nearest
+
 
 func _use_mouse_based_movement(delta: float) -> void:
 	global_position = global_position.lerp(get_viewport().get_mouse_position(), movement_speed * delta)

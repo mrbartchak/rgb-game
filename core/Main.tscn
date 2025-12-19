@@ -1,16 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqrt6l4gkc6l6"]
+[gd_scene load_steps=8 format=3 uid="uid://cqrt6l4gkc6l6"]
 
 [ext_resource type="PackedScene" uid="uid://vikhvm0qgvh4" path="res://EnemySpawner.tscn" id="1_b2jpy"]
 [ext_resource type="PackedScene" uid="uid://dl7sw8d8ko5su" path="res://player/Player.tscn" id="2_vhp41"]
 [ext_resource type="Shader" uid="uid://duufd1vl0w0v5" path="res://assets/shaders/scrolling_background.gdshader" id="3_1bm4c"]
 [ext_resource type="PackedScene" uid="uid://bwb25uqmhv3nv" path="res://core/cursor/Cursor.tscn" id="3_vhp41"]
+[ext_resource type="Script" uid="uid://dewefxllxqll0" path="res://core/UiManager.gd" id="4_1bm4c"]
 [ext_resource type="Texture2D" uid="uid://c4ntiaf7eh4u6" path="res://assets/backgrounds/pattern_10.png" id="4_66bhq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q8u5g"]
 shader = ExtResource("3_1bm4c")
 shader_parameter/scroll_speed = 0.050000002375
 shader_parameter/angle_degrees = 270.0
-shader_parameter/repeat = 12.0
+shader_parameter/repeat = 16.0
 shader_parameter/tint = Color(0.7, 0.74999994, 1, 0.078431375)
 
 [node name="Main" type="Node"]
@@ -31,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_1bm4c")
 
 [node name="Background" type="TextureRect" parent="UI"]
 z_index = -4096
@@ -46,15 +48,15 @@ texture = ExtResource("4_66bhq")
 stretch_mode = 6
 flip_v = true
 
-[node name="HUD" type="Control" parent="."]
-layout_mode = 3
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Score" type="RichTextLabel" parent="HUD"]
+[node name="Score" type="RichTextLabel" parent="UI/HUD"]
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 1
 anchors_preset = 5
@@ -66,3 +68,14 @@ offset_right = -54.0
 offset_bottom = 39.0
 grow_horizontal = 2
 text = "score"
+
+[node name="QuitButton" type="Button" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 4.0
+offset_right = 316.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 8
+text = "x"
+
+[connection signal="pressed" from="UI/HUD/QuitButton" to="UI" method="_on_quit_button_pressed"]
